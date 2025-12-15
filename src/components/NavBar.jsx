@@ -1,5 +1,6 @@
 import logo from '../assets/zonaGame.svg'
 import CartWidget from './CartWidget'
+import CategoryListContainer from './CategoryListContainer'
 
 function NavBar() {
     return (
@@ -15,15 +16,7 @@ function NavBar() {
                     <span aria-hidden="true"></span>
                 </a>
             </div>
-            <div className='navbar-start'>
-                <div className='navbar-item'>
-
-                    <a href="#">Computadoras</a>
-                    <a href="#">Consolas</a>
-                    <a href="#">Accesorios</a>
-                    <a href="#">Celulares</a>
-                </div>
-            </div>
+            <CategoryListContainer/>
             <div className='navbar-end'>
                 <div className='navbar-item'>
                     <a href="">
