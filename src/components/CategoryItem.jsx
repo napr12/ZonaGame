@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 const CategoryItem = ({ Item }) => {
     return (
 
-        <a className="navbar-item">
-            {Item}
-        </a>
+        <Link className="navbar-item" to={`category/${Item}`}>
+            {Item.toUpperCase()}
+        </Link>
 
     )
 

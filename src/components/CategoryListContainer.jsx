@@ -9,15 +9,13 @@ const CategoryListContainer = () => {
     }, [])
     return (
 
-
-        <div className='navbar-item has-dropdown is-hoverable navbar-end'>
-            <a className="navbar-link">
-                Categorias
-            </a>
-            <div className="navbar-dropdown" >
-                {category.map((category) => <CategoryItem key={category} Item={category.toUpperCase()} />)}
-            </div>
-
+        <div className=" navbar-item has-dropdown is-hoverable">
+                <a className="navbar-link cell">
+                    Categorias
+                </a>
+                <div className="navbar-dropdown" >
+                    {category.map((category) => <CategoryItem key={category} Item={category} />)}
+                </div>
         </div>
 
     )
