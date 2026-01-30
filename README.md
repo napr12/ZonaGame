@@ -1,16 +1,88 @@
-# React + Vite
+# Ecomerces 🛒
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Ecomerce** creado con React y Vite. Aplicación de ejemplo para mostrar un catálogo de productos, ver detalles, sumar productos al carrito y finalizar compras usando Firebase como backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Características
 
-## React Compiler
+- Catálogo de productos y filtrado por categorías
+- Página de detalle de producto con contador y añadir al carrito
+- Carrito persistente usando React Context
+- Integración con Firebase (Firestore) para obtener productos
+- Notificaciones con `react-toastify` y loaders para cargas asíncronas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧰 Tecnologías
 
-## Expanding the ESLint configuration
+- React 19 + Vite
+- Firebase (Firestore)
+- React Router DOM
+- Bulma / Bootstrap Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone <tu-repo> && cd Ecomerces
+   ```
+
+2. Instala dependencias:
+
+   ```bash
+   npm install
+   ```
+
+3. Ejecuta el servidor de desarrollo:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Build para producción:
+
+   ```bash
+   npm run build
+   npm run preview
+   ```
+
+5. Linter:
+
+   ```bash
+   npm run lint
+   ```
+
+## ⚙️ Configuración de Firebase
+
+- Las credenciales de Firebase están en `src/firebase/config.js`. Puedes usar variables de entorno si prefieres (por ejemplo `.env`) y actualizar ese archivo.
+- Asegúrate de tener Firestore configurado y de que la colección de productos coincida con la que espera `src/firebase/db.js`.
+
+> Nota: Si guardas credenciales en `.env`, reinicia el servidor de desarrollo después de crear o cambiar el archivo.
+
+## 📁 Estructura principal del proyecto
+
+- `src/`
+  - `components/` - Componentes UI (NavBar, ItemList, ItemDetail, Cart, etc.)
+  - `context/` - `CartContext` y proveedor de carrito
+  - `firebase/` - `config.js`, `db.js` (conexión a Firestore)
+  - `css/` - Estilos globales
+  - `assets/` - Imágenes y recursos
+  - `App.jsx`, `main.jsx`
+
+## 🧪 Scripts disponibles
+
+- `npm run dev` — ejecutar en modo desarrollo
+- `npm run build` — crear versión de producción
+- `npm run preview` — previsualizar la build
+- `npm run lint` — ejecutar ESLint
+
+
+## 📬 Contacto y licencia
+
+- Autor: repositorio local `nahuel502010@gmail.com`.
+
+
+---
+
+¡Listo! Si quieres, puedo ajustar el README para incluir screenshots, ejemplos de endpoints de Firestore o instrucciones para desplegar en Netlify/ Vercel. 💡
